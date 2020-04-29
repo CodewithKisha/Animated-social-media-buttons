@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/becbb30976.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="header-area">
+                <h1 class="heading">Tick-it-up</h1>
+            </div>
+            <div class="icon-area">
+              <ul>
+                  <li><i class="fas fa-cloud-moon" id="dark"></i></li>
+                  <li><i class="fas fa-cloud-sun" id="dark"></i></li>
+                  <li><i class="fas fa-users"></i></li>
+                  <li><i class="fas fa-spinner"></i></li>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <li><i class="fas fa-question"></i></li>
+                  <li><i class="fas fa-cogs"></i></li>
+              </ul>
+         
+              <div class="modal-box">
+                <div class="modal-container">
+                  <p>We have over 40 users currently using this app</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="content-area">
+                <form>
+                    <input type="text" class="todo-input">
+                    <button class="todo-button" type ="submit">
+                    <i class="fas fa-plus-square"></i>
+                    </button>
+                    <div class="select">
+                      <select name="todos" class="filter-todo">
+                          <option value="all">All</option>
+                          <option value="completed">Completed</option>
+                          <option value="uncompleted">Uncompleted</option>
+                      </select>
+                  </div>
+                </form>
+          
+                <div class="todo-container">
+                    <ul class="todo-list"></ul>
+                </div>
+            </div>
+          </div>
+          
+    </section>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

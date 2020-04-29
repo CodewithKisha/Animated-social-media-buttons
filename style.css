@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #c3bbcc;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-row: 50px auto 1fr;
+    border-radius: 9px;
+    margin: 40px 40px 40px 40px;
+    background-color: #dedae2;
+    grid-template-areas: 
+       "Advert header"
+       "Advert content"
+       "Advert content";
+}
+
+
+.header-area {
+    background-color: #f2f1f3;
+    grid-area: header;
+    text-align: center;
+    padding: 20px;
+    height: 34px;
+    border-radius: 0 9px 0 0;
+}
+
+.heading {
+    margin-top: -.8rem;
+    color: #fa62ae;
+    font-size: 35px;
+    font-family: 'Pacifico', cursive;
+}
+
+.icon-area {
+    background-color: #f8f8f8;
+    color: #fa62ae;
+    grid-area: Advert;
+    border-radius: 9px 0 0 9px;
+}
+
+.icon-area ul {
+ list-style: none;
+ text-align: center;
+ padding-right: 1.5rem;
+}
+
+.icon-area ul li{
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.icon-area ul li i:hover {
+   color: #df3b8d;
+}
+
+.content-area {
+    grid-area: content;
+    border-radius: 0 0 9px 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.modal-container {
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #000;
+    left: 50%;
+}
+
+.modal-container {
+    display: none;
+}
+
+
+form {
+    min-height: 44vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10%;
+}
+
+form input, form button {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border: none;
+    background: #fff;
+}
+
+form input{
+    border-radius: 40px 0 0 40px;
+}
+
+form input:focus {
+    outline: none;
+}
+
+
+form button {
+    color: #df3b8d;
+    background:  #fff;
+    padding-right: 2%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0 40px 40px 0;
+}
+
+form button:focus {
+    outline: none;
+}
+
+form button:hover {
+    background: #9e1d4f;
+    color: #fff;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+min-width: 20%;
+list-style: none;
+}
+
+
+.todo{
+    background: #fff;
+    margin: 0.5rem;
+    padding: .3rem 1rem;
+    color:#000;
+    font-size: 1rem;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, .complete-btn {
+    background: #d17498;
+    color:#fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: #9e1d4f;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+     appearance: none;
+     outline: none;
+     border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+select {
+    color: #fa62ae;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #f5ecf0;
+    color: #fa62ae;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: #fff;
+    color: #fa62ae;
+}
+
+
+@media screen and (max-width: 754px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+           "Advert header"
+           "Advert content"
+           "Advert content";
+    }
+
+    
+form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.select {
+    margin-top: -40%;
+}
+
+form button {
+    margin-left: 50%;
+    margin-top: -48px;
+    position: static;
+}
+
+
+}
+
+@media screen and (max-width: 660px) {
+
+    form input {
+        border-radius: 40px;
+    }
+
+
+  form button {
+      background-color:#fff;
+      border: none;
+      outline: none;
+      border-radius: inherit;
+  }
+
+  form button:hover {
+      color: #df3b8d;
+      background: none;
+  }
+
+  i {
+      outline: none;
+      border: none;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas: 
+       "header header"
+       ". content"
+       ". content";
+       height: 700px;
+}
+
+.icon-area {
+    display: none;
+}
+}
+
+
+
+
